@@ -1,0 +1,34 @@
+@URL=http://localhost/
+@TOKEN=12345
+@VALUE=7ead654f1e2dcbf3327782d93ae018
+
+### Listado de usuarios
+GET {{URL}}
+Authorization: {{TOKEN}}
+
+### Mostrar Libros
+GET {{URL}}books
+
+### Mostrar Libros
+GET {{URL}}books/7ead654f1e2dcbf3327782d93ae018
+
+### Añadir libro
+POST {{URL}}books/add
+
+{
+  "title":"Lo que el viento se llevó_____________",
+  "author":"dsddfad3441234dasfdf23213",
+  "pages":"250"
+}
+
+### Editar Libro
+POST {{URL}}books/edit/{{VALUE}}
+
+{
+  "title":"Lo que el viento se llevó",
+  "author":"dsddfad3441234dasfdf23213",
+  "pages":"250"
+}
+
+### Eliminar Libro
+POST {{URL}}books/del/{{VALUE}}

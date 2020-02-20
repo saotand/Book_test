@@ -1,0 +1,32 @@
+@URL=http://localhost/
+@TOKEN=12345
+@VALUE=dsddfad3441234dasfdf23213
+
+
+### Mostrar Libros
+GET {{URL}}authors
+
+
+### Mostrar Libros
+GET {{URL}}authors/dsddfad3441234dasfdf23213
+
+
+### añadir libro
+POST {{URL}}authors/add
+
+{
+  "name":"Leonardo",
+  "description":"-_-"
+}
+
+
+### editar libro
+POST {{URL}}authors/edit/{{VALUE}}
+
+{
+  "name":"David Salinas",
+  "description":"N/D"
+}
+
+### Eliminar Libro
+POST {{URL}}authors/del/{{VALUE}}
